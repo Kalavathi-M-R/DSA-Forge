@@ -1,8 +1,9 @@
 class Solution:
     def subtractProductAndSum(self, n: int) -> int:
-        sum = 0
+        digit_sum = 0
         product = 1
         for digit in str(n):
-            sum += int(digit)
-            product *= int(digit)
-        return (product - sum)
+            digit = int(digit)
+            digit_sum += digit
+            product *= digit
+        return (product - digit_sum)
